@@ -1,14 +1,14 @@
 version: '2'
 services:
   site:
-    image: repo.treescale.com/ultravisual/ultravisual-site:latest
+    image: repo.treescale.com/ultravisual/ultravisual-site
     # image: ultravisual-site:test
     ports:
       - "3000:3000"
     container_name: ultravisual.site
 
   nginx:
-    image: repo.treescale.com/ultravisual/ultravisual-nginx:latest
+    image: repo.treescale.com/ultravisual/ultravisual-nginx
     # image: ultravisual-nginx:test
     ports:
       - "80:80"
