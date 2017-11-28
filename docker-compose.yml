@@ -13,7 +13,5 @@ services:
     ports:
       - "80:80"
     container_name: ultravisual.nginx
-    volumes:
-      - ./logs:/var/log/syslog
     depends_on:
       - site
