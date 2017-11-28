@@ -1,16 +1,19 @@
 version: '2'
 services:
   site:
-    image: cloud.canister.io:5000/ultravisual/ultravisual-site:latest
+    # image: cloud.canister.io:5000/ultravisual/ultravisual-site:latest
+    image: ultravisual-site:test
     ports:
       - "3000:3000"
     container_name: ultravisual.site
 
   nginx:
-    image: cloud.canister.io:5000/ultravisual/ultravisual-nginx:latest
+    # image: cloud.canister.io:5000/ultravisual/ultravisual-nginx:latest
+    image: ultravisual-nginx:test
     ports:
       - "80:80"
     container_name: ultravisual.nginx
+    volumes:
+      - ./logs:/var/log/syslog
     depends_on:
       - site
-      
