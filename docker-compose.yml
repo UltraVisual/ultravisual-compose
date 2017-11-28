@@ -1,0 +1,16 @@
+version: '2'
+services:
+  site:
+    image: cloud.canister.io:5000/ultravisual/ultravisual-site:latest
+    ports:
+      - "3000:3000"
+    container_name: ultravisual.site
+
+  nginx:
+    image: cloud.canister.io:5000/ultravisual/ultravisual-nginx:latest
+    ports:
+      - "80:80"
+    container_name: ultravisual.nginx
+    depends_on:
+      - site
+      
