@@ -1,5 +1,5 @@
 git pull
 
 docker-compose stop
-docker-compose rm -rf 
+docker-compose rm -f 
 docker-compose up -d
