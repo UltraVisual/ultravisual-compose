@@ -3,6 +3,7 @@ services:
   site:
     image: repo.treescale.com/ultravisual/ultravisual-site:latest
     # image: ultravisual-site:test
+    restart: always
     ports:
       - "3000:3000"
     container_name: ultravisual.site
@@ -10,6 +11,7 @@ services:
   nginx:
     image: repo.treescale.com/ultravisual/ultravisual-nginx:latest
     # image: ultravisual-nginx:test
+    restart: always
     ports:
       - "80:80"
     container_name: ultravisual.nginx
