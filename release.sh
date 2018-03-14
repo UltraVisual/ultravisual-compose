@@ -1,6 +1,6 @@
+#!/usr/bin/env bash
+
 git pull
 
 docker-compose pull
-docker-compose stop
-docker-compose rm -f 
-docker-compose up -d
+docker-compose up --remove-orphans -d
